@@ -1,36 +1,28 @@
-# Desafio para candidatos à vaga de desenvolvedor Krooze (Equipe GDS) - Felipe Machado
-A proposta desse desafio era poder desenvolver os métodos e funcionalidades desse sistema a partir dos testes unitários. 
-Semelhante à forma que é feita usando TDD (Test-driven development)
+﻿# Felipe Machado - Todo List (Lista de Tarefas) - Frontend Angular 9.0.3 - Backend Spring boot 2.25 Java JDK 13 - Repositório MongoDB  
+A proposta desse projeto era poder desenvolver uma simples lista de tarefas utilizando Angular, Java Spring boot e o MongoDB como repositório. 
+Link para o ver o projeto na web : https://todo-felipemachado.firebaseapp.com/
 
 ## Instruções de instalação e execução
-1. Primeiro baixe e compile todos os projetos.
-2. O projeto Krooze.EntranceTest.Web pode ser executado através da linha de commando: dotnet run
-3. Caso deseje executar a aplicação em container execute os seguintes comandos:
-    docker build -t aspnetapp .
-    docker run -d -p 8080:80 --name myapp aspnetapp
+1. Primeiro baixe/clone e compile todos os projetos.
+2. O projeto Angular (Frontend) pode ser executado através da linha de commando: ng serve
+3. O projeto Java Spring Boot pode ser executado através da linha de comando: mvn clean package para gerar o arquivo Jar do spring boot
+    Depois execute o comando : java -jar target/spring-boot-demo-0.0.1-SNAPSHOT.jar
+    O Frontend estará disponível em : http://localhost:4200
+    O Backend estará disponível em : http://localhost:8080    
 
-## Descrição do projeto prático.
-- Primeira Etapa:
-  - Todos os testes foram validados (Projeto Krooze.EntranceTest.Tests)
-  - Toda implementação está no projeto Krooze.EntranceTest.WriteHere, ou referenciado a partir dele
-- Segunda Etapa:
-  - Foi criado um endpoint pra cada método feito nos testes da primeira etapa, no projeto Krooze.EntranceTest.Web, no total 7 endpoints
-  - Segue a lista dos endpoints:
-  - A porta padrão HTTPS foi mantida a 44308. Dessa formao endereço padrão é : 
-  - https://localhost:44308
-  - E cada Endpoint possui o seguinte sufixo:
-  - /api/tests/Movies
-  - /api/tests/Director
-  - /api/tests/TranslateXML
-  - /api/tests/OtherTaxes
-  - /api/tests/Discount
-  - /api/tests/Installments/{fullPrice}
-  - /api/tests/Cruises
-  - A documentação do Swagger foi implementada e está disponivel através do seguinte endpoint:
-  - https://localhost:44308/swagger
-  - Todos os endpoints estão disponíveis através da documentação do Swagger
+## Descrição detalhada da API REST.
+- Segue o endereço da cada Endpoint: 
+  - A porta padrão 8080 foi mantida para o Backend. Dessa formao endereço padrão é : 
+  - http://localhost:8080/api/v1/todo/
+  - O Header recebe o Content-Type: application/json
+  - GET       --> http://localhost:8080/api/v1/todo/
+  - POST      --> http://localhost:8080/api/v1/todo/
+  - PUT       --> http://localhost:8080/api/v1/todo/
+  - DELETE    --> http://localhost:8080/api/v1/todo/id  
+  
 
 ## Requerimentos Técnicos
- - [.NET Core 2.2](https://dotnet.microsoft.com/download/visual-studio-sdks?utm_source=getdotnetsdk&utm_medium=referral)
- - [.NET Core 2.0](https://dotnet.microsoft.com/download/visual-studio-sdks?utm_source=getdotnetsdk&utm_medium=referral)
- - [Visual Studio 2017 ou 2019](https://visualstudio.microsoft.com/pt-br/downloads/)
+ - [.Node.Js Versão 10+](https://nodejs.org/)
+ - [.Angular 9.0.3](https://angular.io/)
+ - [.Java JDK 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
+ - [.MongoDB 4.2.3](https://www.mongodb.com/download-center/community)

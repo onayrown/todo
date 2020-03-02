@@ -18,7 +18,7 @@ public class TodoService {
         this._todoRepository = todoRepository;
     }
 
-    public List<Todo> GetTodo(){
+    public List<Todo> getTodo(){
         return _todoRepository.findAll();
     }
 
@@ -26,8 +26,8 @@ public class TodoService {
         _todoRepository.insert(todo);
     }
 
-    public void removeTodo(Todo todo){
-        _todoRepository.deleteById(todo.getId());
+    public void removeTodo(Long todoId){
+        _todoRepository.deleteById(todoId);
     }
 
     public void updateTodo(Todo todo){

@@ -11,6 +11,7 @@ import java.util.List;
 
 @RequestMapping("/api/v1/todo")
 @RestController
+@CrossOrigin(origins = "*")
 public class TodoController {
     private final TodoService _todoService;
 
@@ -26,7 +27,7 @@ public class TodoController {
 
     @GetMapping
     public List<Todo> Get(){
-        return _todoService.GetTodo();
+        return _todoService.getTodo();
     }
 
     @PutMapping()
@@ -34,8 +35,8 @@ public class TodoController {
         _todoService.updateTodo(todo);
     }
 
-    @DeleteMapping()
-    public  void delete(@Valid @NonNull @RequestBody Todo todo){
-        _todoService.removeTodo(todo);
+    @DeleteMapping(path = "{id}")
+    public  void delete(@PathVariable("id") @Valid @NonNull @RequestBody Long id){
+        _todoService.removeTodo(id);
     }
 }
